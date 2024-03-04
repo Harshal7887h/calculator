@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<center>
+
+    <h1><i>Basic Calculator <br> by Harshal Patil</i> </h1>
+<body class="bg">
+    
+
+    
+    <table border="0" class="a2">
+        <tr>
+            <td colspan="5" class="a1"><i><b><u>Basic Calculator</u></b></i></td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <input type="text" id="result" class="textarea" >
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('7')"><b>7</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('8')"><b>8</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('9')"><b>9</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="clearee()"><b>DEL</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="allclear()"><b>AC</b></button></td>
+        </tr>
+        <tr>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('4')"><b>4</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('5')"><b>5</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('6')"><b>6</b></button></td>
+            <td rowspan="1" colspan="1"><button class="size" onclick="addToBox('*')"><b>x</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('/')"><b>/</b></button></td>
+        </tr>
+        <tr>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('1')"><b>1</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('2')"><b>2</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('3')"><b>3</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('+')"><b>+</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('-')"><b>-</b></button></td>
+        </tr>
+        <tr>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('.')"><b>.</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('0')"><b>0</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="addToBox('%')"><b>%</b></button></td>
+            <td rowspan="1" colspan="1"><button class="colour" onclick="ans()"><b>ANS</b></button></td>
+            <td rowspan="1" colspan="1"><button class="equal" onclick="calculate()"><b>=</b></button></td>
+        </tr>
+    </table>
+    
+</body>
+
+</center>
+</html>
+
+
+<style>
+    .colour{
+        border-radius: 5px;
+        width:40px;
+        text-align: center;
+        background-color: gray;
+        
+    }
+    .equal{
+        background-color: tomato;
+        border-radius: 5px;
+        width: 40px;
+    }
+    .align{
+        text-align: center;
+    }
+    .textarea{
+        background-color: antiquewhite;
+        height: 50px;
+        width: 220px;
+        border-width: 3;
+    }
+    .a1{
+        text-align: center;
+        height: 35px;
+        border-width: 3;
+    }
+    .a2{
+        border-radius: 10px;
+        background-color: darkgray;
+        height: 300px;
+        width: 10px;
+        border-width: 5px;
+        border: 30px;
+        border-color: black;
+        
+    }
+    .size{
+        border-radius: 5px;
+        width:37px;
+        text-align: center;
+        background-color: gray;
+    }
+    .bg{
+        background-image: url(https://media.istockphoto.com/id/1317273472/vector/numbers-fade.jpg?s=612x612&w=0&k=20&c=RjZpjMHAF-kAfTOwqjp11DkB60UUGjqAOz2ha0tDsac=);
+        background-size:contain;
+    }
+    
+</style>
+
+<script>
+    
+    function addToBox(num)
+    {
+        document.getElementById("result").value += num
+    }
+    function calculate(){
+        res=document.getElementById("result").value
+        document.getElementById("result").value=eval(res)
+        res1=document.getElementById("result").value=eval(res)
+    }
+    function allclear(){
+        document.getElementById("result").value = ""
+    }
+    function clearee(){
+        temp=document.getElementById("result").value
+        document.getElementById("result").value=temp.slice(0,temp.length-1)
+    }
+    function ans(){
+        document.getElementById("result").value=res1
+    }
+    
+</script>
